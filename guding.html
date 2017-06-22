@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*固定咨询*/
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+        .gudingzx{
+            width: 60px;
+            height: 355px;
+            position: fixed;
+            right: 10px;
+            bottom:100px;
+            z-index: 99999999999;
+        }
+        .gudingzx a{
+            display: block;
+        }
+        .gudingzx .kefu1{
+            background: url("kf1.jpg") no-repeat;
+        }
+        .gudingzx .kefu2{
+            background: url("kf2.jpg") no-repeat;
+        }
+        .gudingzx .dianhua,.gudingzx .gongzhonghao,.gudingzx .fanhuidingbu,.gudingzx a{
+            width: 60px;
+            height: 70px;
+            margin-bottom: 1px;
+            cursor: pointer;
+        }
+        .gudingzx .dianhua{
+            overflow: hidden;
+            transition: all 0.6s;
+            background: url("dhzixun.jpg") no-repeat;
+        }
+        .gudingzx .dianhua:hover{
+            width: 270px;
+            margin-left: -210px;
+        }
+        .gudingzx .gongzhonghao{
+            position: relative;
+            background: url("gzh.jpg") no-repeat;
+        }
+        .gudingzx .gongzhonghao .erwei{
+            width: 191px;
+            height: 184px;
+            display: none;
+            position: absolute;
+            top:50%;
+            margin-top: -92px;
+            left: -201px;
+            background: url("gzhew.png") no-repeat;
+        }
+        .gudingzx .gongzhonghao:hover .erwei{
+            display: block;
+        }
+        .gudingzx .fanhuidingbu{
+            background: url("fhdb.jpg") no-repeat;
+        }
+    </style>
+    <script src="jquery-1.10.2.min.js"></script>
+</head>
+<body>
+<div class="gudingzx">
+    <a class="kefu1" target="_blank" href="https://static.meiqia.com/dist/standalone.html?_=t&eid=52432"></a>
+    <a class="kefu2" target="_blank" href="http://p.qiao.baidu.com/cps/chat?siteId=10556947&userId=23400490"></a>
+    <div class="dianhua"></div>
+    <div class="gongzhonghao">
+        <div class="erwei"></div>
+    </div>
+    <div class="fanhuidingbu"></div>
+</div>
+<div style="width: 10px;height: 2000px;"></div>
+<script type='text/javascript'>
+    // 返回顶部
+    var fanhui=$(".gudingzx .fanhuidingbu");
+    fanhui.click(function () {
+        var speed=200;//滑动的速度
+        $('body,html').animate({ scrollTop: 0 }, speed);
+        return false;
+    });
+</script>
+</body>
+</html>
